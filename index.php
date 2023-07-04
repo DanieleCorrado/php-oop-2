@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,117 +17,31 @@
 </head>
 <body>
 
-<!-- Prodotto -->
+<?php 
+  foreach ($products as $product) { ?>
 
-<div>
+    <h1>
+      <?php echo $product -> getName(); ?>
+    </h1>
 
-  <h1>
-    <?php echo $product1 -> getName(); ?>
-  </h1>
-
-  <div>
-    <img src="<?php echo $product1 -> getImage()?>" alt="Immagine prodotto">
-  </div>
-
-  <div>
-    <b>Tipologia:</b> <?php echo $product1 -> getType(); ?>
-  </div>
-
-  <div>
-    <b>Prezzo:</b> <?php echo $product1 -> getPrice(); ?> E
-  </div>
-  
-  <div>
     <div>
-      <b>Categoria:</b> <?php echo $product1 -> getCategory(); ?>
-    </div>  
-  </div>
-  
-</div>
+      <img src="<?php echo $product -> getImage()?>" alt="Immagine prodotto">
+    </div>
 
-<!-- Prodotto -->
-
-<div>
-
-  <h1>
-    <?php echo $product2 -> getName(); ?>
-  </h1>
-
-  <div>
-    <img src="<?php echo $product1 -> getImage()?>" alt="Immagine prodotto">
-  </div>
-
-  <div>
-    <b>Tipologia:</b> <?php echo $product2 -> getType(); ?>
-  </div>
-
-  <div>
-    <b>Prezzo:</b> <?php echo $product2 -> getPrice(); ?> E
-  </div>
-
-  <div>
     <div>
-      <b>Categoria:</b> <?php echo $product2 -> getCategory(); ?>
-    </div>  
-  </div>
-  
-</div>
+      <b>Tipologia:</b> <?php echo $product -> getType(); ?>
+    </div>
 
-<!-- Prodotto -->
-
-<div>
-
-  <h1>
-    <?php echo $product3 -> getName(); ?>
-  </h1>
-
-  <div>
-    <img src="<?php echo $product1 -> getImage()?>" alt="Immagine prodotto">
-  </div>
-
-  <div>
-    <b>Tipologia:</b> <?php echo $product3 -> getType(); ?>
-  </div>
-
-  <div>
-    <b>Prezzo:</b> <?php echo $product3 -> getPrice(); ?> E
-  </div>
-
-  <div>
     <div>
-      <b>Categoria:</b> <?php echo $product3 -> getCategory(); ?>
-    </div>  
-  </div>
-  
-</div>
-
-<!-- Prodotto -->
-
-<div>
-
-  <h1>
-    <?php echo $product4 -> getName(); ?>
-  </h1>
-
-  <div>
-    <img src="<?php echo $product1 -> getImage()?>" alt="Immagine prodotto">
-  </div>
-
-  <div>
-    <b>Tipologia:</b> <?php echo $product4 -> getType(); ?>
-  </div>
-
-  <div>
-    <b>Prezzo:</b> <?php echo $product4 -> getPrice(); ?> E
-  </div>
-
-  <div>
+      <b>Prezzo:</b> <?php echo $product -> getPrice(); ?> E
+    </div>
+      
     <div>
-      <b>Categoria:</b> <?php echo $product4 -> getCategory(); ?>
-    </div>  
-  </div>
-  
-</div>
-  
+      <b>Categoria:</b> <?php echo $product -> getCategory(); ?>  
+    </div>
+
+<?php } ?>
+
+
 </body>
 </html>

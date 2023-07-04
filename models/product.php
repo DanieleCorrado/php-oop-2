@@ -1,9 +1,10 @@
 <?php
 
+  require('traits.php');
   class product {
     private $name;
     private $type;
-    private $price;
+    use Price;
     private $image;
     private $category;
 
@@ -18,6 +19,10 @@
     }
 
     public function setName($name) {
+
+      if (strlen($name) < 1) {
+        throw new Exception("Name must must have at least 1 characters");
+      }
       $this -> name = $name;
     }
 
@@ -31,14 +36,6 @@
 
     public function getType() {
       return $this -> type;
-    }
-
-    public function setPrice($price) {
-      $this -> price = $price;
-    }
-
-    public function getPrice() {
-      return $this -> price;
     }
 
     public function setImage($image) {
